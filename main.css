@@ -191,7 +191,7 @@ ul {
 
 .nav-item:hover {
   background-color: #282828;
-  transition: transform 1.0s ease-in;
+  transition: all 0.3s ease 0s;
 }
 
 .nav-item:hover a{
@@ -208,6 +208,7 @@ ul {
 .nav a:hover {
   color: #fff;
 }
+
 
 /*
  *
