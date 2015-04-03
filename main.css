@@ -1,10 +1,9 @@
 /* zocial */
 [class*="zocial-"]:before {
   font-family: 'zocial', sans-serif;
-  text-shadow: 3px 3px 3px #aaa;
   width: 20vw;
-  margin-right: 10px;
-  color: #78909c;
+  margin-right: 5px;
+  color: #cacaca;
 }
 
 body, html {
@@ -38,15 +37,15 @@ div {
 }
 
 section {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #176bec;
-  margin: 1em 0;
+  border-top: 1px solid #e3e3e3;
+  margin: 0.2em 0 1em 0;
   padding: 0;
 }
 
@@ -77,6 +76,18 @@ ul {
   font-size: 80%;
   text-align: center;
   font-weight: 300;
+  color: #848484;
+}
+
+.teaser {
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
 }
 
 /*
@@ -87,28 +98,29 @@ ul {
 
 .header {
   min-height: 56px;
-  padding: 30px 0;
+  padding: 0 0 30px 0;
 }
 
 .header-inner {
   width: 100%;
-  margint: 0 auto;
+  margin: 0 auto;
+  background-color: #000;
 }
 
 .header-logo {
   height: 72px;
-  margin-right: 1em;
-  vertical-align: top;
-  margin-top: 12px;
+
 }
 
 .header-title {
   font-weight: bold;
-  font-size: 2.5em;
-  margin: 0.5em 0.25em 0 0.25em;
-  display: inline-block;
-  color: #212121;
-  border-bottom: 1px solid #e3e3e3;
+  font-size: 4em;
+  line-height: 2.2em;
+  color: #fff;
+  /*color: #212121;*/
+  margin: auto;
+  text-align: center;
+  /*border-bottom: 1px solid #e3e3e3;*/
 }
 
 /*
@@ -158,12 +170,13 @@ ul {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  background-color: #ecebe9;
 }
 
 .nav-list {
-  width: 100%;
+  width: 80%;
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 
 .nav-item {
@@ -177,7 +190,7 @@ ul {
 }
 
 .nav-item:hover {
-  background-color: #78909c;
+  background-color: #282828;
   transition: transform 1.0s ease-in;
 }
 
@@ -188,6 +201,7 @@ ul {
 .nav a {
   text-decoration: none;
   color: #616161;
+  font-weight: bold;
   padding: 1.5em auto;
 }
 
@@ -250,17 +264,20 @@ main {
  */
 
 .calendar {
-  max-height: 300px;
-  border-bottom: 1px solid #E0E0E0;
+  /*max-height: 300px;*/
+  border-bottom: 1px solid #e0e0e0;
   padding: 1em;
   width: 100%;
+  /*background-color: #ecebe9;*/
 }
 
 .calendar-title {
   font-weight: bold;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e0e0e0;
   line-height: 24px;
   font-size: 16px;
+  background-color: #cacaca;
+  color: #fff;
 }
 
 .calendar-item {
@@ -350,6 +367,7 @@ main {
  */
 
 .links {
+  /*background-color: #ecebe9;*/
   flex-grow: 1;
   padding: 1em;
 }
@@ -357,9 +375,8 @@ main {
 .links-title
  {
   border-bottom: 1px solid #e0e0e0;
-  display: block;
-  font-weight: bold;
-  font-size: 1.5em;
+  background-color: #cacaca;
+  color: #fff;
 }
 
 .links-list {
@@ -408,11 +425,14 @@ main {
   padding: 1em;
 }
 
+.news {
+  /*background-color: #ecebe9;*/
+}
+
 .news-title {
+  background-color: #cacaca;
+  color: #fff;
   border-bottom: 1px solid #e0e0e0;
-  display: block;
-  font-weight: bold;
-  font-size: 1.5em;
 }
 
 .snippet {
@@ -465,7 +485,7 @@ footer a {
 }
 
 .legal {
-  padding: 2em 0 2em 1.5em;
+  padding: 2em 0 1em 1.5em;
   color: #848484;
   font-weight: 300;
 }
@@ -481,10 +501,12 @@ footer a {
 }
 
 .videos-title {
-  border-bottom: 1px solid #e0e0e0;
-  display: block;
   font-weight: bold;
-  font-size: 1.5em;
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 24px;
+  font-size: 16px;
+  background-color: #cacaca;
+  color: #fff;
 }
 
 iframe {
@@ -510,9 +532,8 @@ iframe:last-of-type {
 
 .gallery-title {
   border-bottom: 1px solid #e0e0e0;
-  display: block;
-  font-weight: bold;
-  font-size: 1.5em;
+  background-color: #cacaca;
+  color: #fff;
 }
 
 figcaption {
@@ -542,7 +563,7 @@ figure {
   .header-title {
     margin-left: 0;
     font-size: 1.7em;
-    vertical-align: bottom;
+    /*vertical-align: bottom;*/
   }
   .links,
   .videos {
@@ -613,8 +634,14 @@ figure {
 }
 
 @media screen and (min-width: 960px) {
-  main, .header-inner, .nav, .content {
+  main, .content {
     width: 960px;
     margin: 0 auto;
   }
+}
+
+.header-inner,
+.nav {
+  width: 100%;
+  margin: 0 auto;
 }
