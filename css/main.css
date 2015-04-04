@@ -570,7 +570,11 @@ figure {
     font-size: 0.8em;
   }
   .time {
-    font-size: 12px;
+    font-size: 11px;
+  }
+  .time-table th,
+  .time-table td {
+    padding: 0.25em;
   }
   .nav {
     z-index: 10;
